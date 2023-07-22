@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+  /***************************************** Top Nav CSS *****************************************/
+.navbar {
+    background-color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px;
+  }
+  
+  .search-bar {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-right: 30px;
+  }
+  
+  .right-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 160px; 
+    transform: translateY(-50%);
+    width: 15px; 
+    height: 15px; 
+    background-image: url("/Images/searchIcon.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none; 
+  }
+
+  /***************************************** Left Side Nav CSS *****************************************/
+  .sidebar {
+    position: fixed;
+    top: 50px;
+    background-color: white;
+    height: 100%;
+    width: 200px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(100% - 50px);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+    width: 150px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+  /* Scrollbar For FireFox */
+.sidebar {
+  scrollbar-width: none;
+}
+
+
+.leftNavHeadings {
+  font-size: small;
+  color: grey;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+  /***************************************** Main Body CSS *****************************************/
+.mainBody {
+  position: fixed;
+  top: 50px;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: rgba(173, 179, 184, 0.808);
+}
+
+.mainBodyContent {
+  padding: 20px;
+}
+
+.contentContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.boxContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  width: calc(25% - 10px);
+  height: 150px;
+  background-color: white;
+  margin-top: 25px;
+  margin-left: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fullWidthBox {
+  grid-column: 1 / span 4;
+  height: 320px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.secondRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.boxSecondRow {
+  height: 280px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.secondFullWidthBox {
+  grid-column: 1 / span 4;
+  height: 425px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.thirdRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.boxThirdRow {
+  height: 425px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+  /***************************************** Box Content CSS *****************************************/
+
+.right-half {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-half img {
+  max-width: 120px;
+  max-height: 120px;
+  margin-left: 20px;
+}
+
+.left-half {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-half h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-half h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.left-half p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
