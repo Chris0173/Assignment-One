@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institute Of Data: Assignment One</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!---------------------------------------- Top Navigation bar ---------------------------------------->
@@ -112,31 +113,31 @@
             <div class="fullWidthBox">
                 <!--Button Section-->
                 <div class="top-right-section">
-                    <button class="button">Options</button>
-                    <button class="button">View All</button>
+                    <button class="button" id="options-button">Options</button>
+                    <button class="button" id="view-all-button">View All</button>
                 </div>
                 <!--Table-Section-->
                 <div class="table-section">
                     <table>
                         <tr>
                             <td>Total Customer</td>
-                            <td>8,257</td>
+                            <td>8,257<sup><span style="color: green;"> +09%</span></sup></td>
                         </tr>
                         <tr>
                             <td>Total Income</td>
-                            <td>$9,857</td>
+                            <td>$9,857<sup><span style="color: red;"> -18%</span></sup></td>
                         </tr>
                         <tr>
                             <td>Project Completed</td>
-                            <td>28</td>
+                            <td>28<sup><span style="color: green;"> +16%</span></sup></td>
                         </tr>
                         <tr>
                             <td>Total Expense</td>
-                            <td>$6,287</td>
+                            <td>$6,287<sup><span style="color: green;"> +09%</span></sup></td>
                         </tr>
                         <tr>
                             <td>New Customers</td>
-                            <td>684</td>
+                            <td>684<sup><span style="color: green;"> +22%</span></sup></td>
                         </tr>
                     </table>
                 </div>
@@ -160,16 +161,258 @@
                 </div>
             </div>
             <div class="secondRow">
-                <div class="boxSecondRow"></div>
-                <div class="boxSecondRow"></div>
-                <div class="boxSecondRow"></div>
+                <!--Sixth Box-->
+                <div class="boxSecondRow">
+                    <h1>Ipod Sales</h1>
+                    <img src="/Images/graphOne.png" alt="Default Graph Image 1" id="firstGraphImage">
+                </div>
+                <!--Seventh Box-->
+                <div class="boxSecondRow">
+                    <h1>M5 Sales</h1>
+                    <img src="/Images/graphTwo.png" alt="Default Graph Image 2" id="secondGraphImage">
+                </div>
+                <!--Eighth Box-->
+                <div class="boxSecondRow">
+                    <h1>Sales v Profit</h1>
+                    <img src="/Images/graphThree.jpg" alt="Default Graph Image 3" id="thirdGraphImage">
+                </div>
             </div>
-            <div class="secondFullWidthBox"></div>
+            <div class="secondFullWidthBox">
+                <h1>Assign Task Table</h1>
+                <div class="search-bar" id="fullWidthBoxSearch">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <span class="search-icon"></span>
+                </div>
+                <div class="assignTaskTable">
+                    <table id="assignmentTable">
+                        <!--Header row-->
+                        <tr>
+                            <th></th>
+                            <th>Task Name</th>
+                            <th>Members</th>
+                            <th>Task Status</th>
+                            <th>Assign Date</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Action</th>
+                        </tr>
+                        <!--First row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Create a mobile app</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="lowPriority" style="width: 50%;" ></div>
+                                    <span class="progressText">50%</span>
+                                </div>
+                            </td>
+                            <td>2018-01-20</td>
+                            <td>2019-05-28</td>
+                            <td><div class="priority-box low-priority">Low</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                        <!--Second row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Redesign homepage</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="highPriority" style="width: 40%;"></div>
+                                    <span class="progressText">40%</span>
+                                </div>
+                            </td>
+                            <td>2017-07-14</td>
+                            <td>2018-07-21</td>
+                            <td><div class="priority-box high-priority">High</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                        <!--Third row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Backup database</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="averagePriority" style="width: 55%;"></div>
+                                    <span class="progressText">55%</span>
+                                </div>
+                            </td>
+                            <td>2019-07-25</td>
+                            <td>2019-08-17</td>
+                            <td><div class="priority-box average-priority">Average</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                        <!--Fourth row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Android App</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="lowPriority" style="width: 70%;"></div>
+                                    <span class="progressText">70%</span>
+                                </div>
+                            </td>
+                            <td>2018-04-15</td>
+                            <td>2019-07-19</td>
+                            <td><div class="priority-box low-priority">Low</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                        <!--Fifth row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Logo Design</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="highPriority" style="width: 45%;"></div>
+                                    <span class="progressText">45%</span>
+                                </div>
+                            </td>
+                            <td>2017-02-24</td>
+                            <td>2018-09-06</td>
+                            <td><div class="priority-box high-priority">High</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                        <!--Sixth row-->
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Ecommerce website</td>
+                            <td><img src="#" alt="Members"></td>
+                            <td>
+                                <div class="statusBar">
+                                    <div class="statusBarProgress" id="averagePriority" style="width: 30%;"></div>
+                                    <span class="progressText">30%</span>
+                                </div>
+                            </td>
+                            <td>2018-01-20</td>
+                            <td>2019-05-28</td>
+                            <td><div class="priority-box average-priority">Average</div></td>
+                            <td><input type="button" value="Details" class="Action"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
             <div class="thirdRow">
-                <div class="boxThirdRow"></div>
-                <div class="boxThirdRow"></div>
+                <div class="boxThirdRow">
+                    <h1>Support Ticket</h1>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search..." class="search-box">
+                        <span class="search-input"></span>
+                    </div>
+                    <div class="commentSection">
+                        <!---First Comment-->
+                        <div class="userProfileContainer">
+                            <img src="/Images/user1.jpg" alt="Default user1" class="userProfile">
+                            <div class="userInfo">
+                              <p><span class="userNumber">#89754</span><span class="subject"> Please add advanced table</span></p>
+                              <p class="comment">Hi, can you please add new table for advan...</p>
+                              <p class="details">Created by <strong>John Deo</strong> - 1 day ago</p>
+                            </div>
+                            <p class="keyWord" id="feature">Feature</p>
+                          </div> 
+                        <!---Second Comment-->
+                        <div class="userProfileContainer">
+                            <img src="/Images/user3.png" alt="Default user2" class="userProfile">
+                            <div class="userInfo">
+                              <p><span class="userNumber">#57854</span><span class="subject"> Select item not working</span></p>
+                              <p class="comment">please check select item in advanced form not work...</p>
+                              <p class="details">Created by <strong>Sarah Smith</strong> - 2 day ago</p>
+                            </div>
+                            <p class="keyWord" id="bug">Bug</p>
+                          </div>
+                        <!---Third Comment-->
+                        <div class="userProfileContainer">
+                            <img src="/Images/user4.jpg" alt="Default user3" class="userProfile">
+                            <div class="userInfo">
+                              <p><span class="userNumber">#85784</span><span class="subject"> Are you provide template in Angular?</span></p>
+                              <p class="comment">can you provide template in latest angular 8.</p>
+                              <p class="details">Created by <strong>Ashton Cox</strong> - 2 day ago</p>
+                            </div>
+                            <p class="keyWord" id="query">Query</p>
+                          </div>
+                        <!---Fourth Comment-->
+                        <div class="userProfileContainer">
+                            <img src="/Images/user2.png" alt="Default user4" class="userProfile">
+                            <div class="userInfo">
+                              <p><span class="userNumber">#25874</span><span class="subject"> About template page load speed</span></p>
+                              <p class="comment">Hi John, can you work on increase page speed of template...</p>
+                              <p class="details">Created by <strong>Hasan Basri</strong> - 3 day ago</p>
+                            </div>
+                            <p class="keyWord" id="enhancement">Enhancement</p>
+                            <p class="viewAllLink"><a href="#">View All</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxThirdRow">
+                    <div class="projectsSection">
+                        <h1>Projects Payment</h1>
+                        <table class="projectPaymentTable">
+                            <tr>
+                                <th>#</th>
+                                <th>Client Name</th>
+                                <th>Date</th>
+                                <th>Payment Method</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>11-08-2018</td>
+                                <td>NEFT</td>
+                                <td>$258</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Cara Stevens</td>
+                                <td>15-07-2018</td>
+                                <td>PayPal</td>
+                                <td>$125</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Airi Satou</td>
+                                <td>25-08-2018</td>
+                                <td>RTGS</td>
+                                <td>$287</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Angelica Ramos</td>
+                                <td>01-05-2018</td>
+                                <td>Cash</td>
+                                <td>$170</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Ashton Cox</td>
+                                <td>18-04-2018</td>
+                                <td>NEFT</td>
+                                <td>$970</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Jerry Doe</td>
+                                <td>22-11-2018</td>
+                                <td>PayPal</td>
+                                <td>$854</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Hasan Basri</td>
+                                <td>07-09-2018</td>
+                                <td>Cash</td>
+                                <td>$128</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+

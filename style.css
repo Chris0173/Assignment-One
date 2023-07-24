@@ -215,7 +215,6 @@ body {
   /***************************************** Box Content CSS *****************************************/
 
   /*top four boxes*/
-
 .right-half {
   flex: 1;
   padding: 20px;
@@ -270,6 +269,16 @@ body {
   font-weight: bold;
 }
 
+#options-button {
+  color: white;
+  background-color: orange;
+}
+
+#view-all-button {
+  color: white;
+  background-color: #6a1fe2;
+}
+
 .table-section {
   margin-bottom: 20px;
   width: 50%;
@@ -279,10 +288,11 @@ table {
   width: 30%;
   border-collapse: collapse;
   margin-left: 1350px;
+  border: none;
 }
 
 td {
-  border: 1px solid #ccc;
+  border: none;
   padding: 8px;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
@@ -359,3 +369,300 @@ font-family: Arial, Helvetica, sans-serif;
   right: -1025px;
 }
 
+/*Second Row Three Boxes*/
+.boxSecondRow h1 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+}
+
+.boxSecondRow img {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+#firstGraphImage {
+  position: relative;
+  left: 100px;
+  bottom: 15px;
+}
+
+#secondGraphImage {
+  position: relative;
+  left: 100px;
+  bottom: 15px;
+}
+
+#thirdGraphImage {
+  position: relative;
+  left: 100px;
+  bottom: 15px;
+}
+
+/*Second Full width Box*/
+.secondFullWidthBox h1 {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#fullWidthBoxSearch {
+  position: relative;
+  left: 1400px;
+  top: -25px;
+}
+
+/*Task Table*/
+#assignmentTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: -0px; 
+}
+
+#assignmentTable th,
+#assignmentTable td {
+  padding: 10px 60px; 
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+#assignmentTable tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+#assignmentTable tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/*Status bar*/
+.statusBar {
+  background-color: #eaeaea;
+  position: relative;
+  height: 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.statusBarProgress {
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.progressText {
+  position: absolute;
+  top: -10px;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Priorities*/
+.priority-box {
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.low-priority {
+  background-color: green;
+}
+
+.average-priority {
+  background-color: rgb(58, 201, 226);
+}
+
+.high-priority {
+  background-color: red;
+}
+
+#highPriority {
+  background-color: red;
+}
+
+#averagePriority {
+  background-color: rgb(58, 201, 226);
+}
+
+#lowPriority {
+  background-color: green;
+}
+
+/*Action Button*/
+.Action {
+  color: #007BFF;
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: #007BFF;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 5px 5px;
+}
+
+/*Support Ticket Box*/
+.boxThirdRow h1 {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  left: 580px;
+  top: -40px;
+}
+
+.search-input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+}
+
+/*Users and comments*/
+.userProfileContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+  justify-content: space-between;
+}
+
+.userProfile {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.userInfo p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.userNumber {
+  font-weight: bold;
+  margin-right: 5px;
+  color: grey;
+}
+
+.subject {
+  font-weight: bold;
+  color: #007BFF;
+  font-size: 11px;
+}
+
+.comment {
+  color: black;
+  font-size: 10px;
+}
+
+.details {
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+}
+
+.keyWord {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+#feature {
+  background-color: green;
+  position: relative;
+  left: -10px;
+}
+
+#bug {
+  background-color: rgb(179, 132, 4);
+  position: relative;
+  left: -10px;
+}
+
+#query {
+  background-color: rgb(59, 8, 177);
+  position: relative;
+  left: -10px;
+}
+
+#enhancement {
+  background-color: rgb(2, 111, 161);
+  position: relative;
+  left: -10px;
+}
+
+/*View All Link*/
+.viewAllLink {
+  position: absolute;
+  bottom: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  }
+  
+  .viewAllLink a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .viewAllLink a:hover {
+    text-decoration: underline;
+  }
+  
+/*Project Payments*/
+.projectsSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.projectPaymentTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projectPaymentTable th, 
+.projectPaymentTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.projectPaymentTable th {
+  background-color: #f2f2f2;
+}
+
+.projectPaymentTable tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.projectPaymentTable tr:hover {
+  background-color: #eaeaea;
+}
